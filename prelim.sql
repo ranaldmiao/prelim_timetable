@@ -1,0 +1,63 @@
+-- MySQL dump 10.13  Distrib 5.6.25-73.1, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: prelim
+-- ------------------------------------------------------
+-- Server version	5.6.25-73.1-56-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `prelim`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `prelim` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `prelim`;
+
+--
+-- Table structure for table `exams`
+--
+
+DROP TABLE IF EXISTS `exams`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `exams` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `level` int(11) NOT NULL,
+  `subject` varchar(2) NOT NULL,
+  `content` text NOT NULL,
+  `start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `end` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `exams`
+--
+
+LOCK TABLES `exams` WRITE;
+/*!40000 ALTER TABLE `exams` DISABLE KEYS */;
+INSERT INTO `exams` VALUES (1,1,'GP','H1 General Paper 1','2014-08-31 16:15:00','2014-08-31 17:45:00'),(2,1,'GP','H1 General Paper 2','2014-08-31 18:15:00','2014-08-31 19:45:00'),(3,2,'KI','H2 KI Paper 2','2014-08-31 21:30:00','2014-08-31 23:30:00'),(4,3,'PH','H3 Physics','2014-09-01 16:15:00','2014-09-01 19:15:00'),(5,2,'AR','H2 Art Paper 1','2014-09-01 16:15:00','2014-09-01 19:15:00'),(6,2,'EC','H2 Economics Paper 1','2014-09-02 16:15:00','2014-09-02 18:30:00'),(7,1,'EC','H1 Economics','2014-09-02 16:15:00','2014-09-02 19:15:00'),(8,2,'MU','H2 Music Practical','2014-09-10 17:00:00','2014-09-11 01:00:00'),(9,2,'MU','H2 Music Practical','2014-09-11 17:00:00','2014-09-12 01:00:00'),(10,1,'BI','H1 Biology Paper 2','2014-09-14 16:15:00','2014-09-14 18:15:00'),(11,2,'BI','H2 Biology Paper 2','2014-09-14 16:15:00','2014-09-14 18:15:00'),(12,1,'PH','H1 Physics Paper 2','2014-09-14 16:15:00','2014-09-14 18:15:00'),(13,2,'PH','H2 Physics Paper 2','2014-09-14 16:15:00','2014-09-14 18:00:00'),(14,1,'LI','H1 Literature in English','2014-09-14 21:30:00','2014-09-15 00:30:00'),(15,2,'LI','H2 Literature in English Paper 1','2014-09-14 21:30:00','2014-09-15 00:30:00'),(16,1,'MA','H1 Mathematics Paper 1','2014-09-15 16:15:00','2014-09-15 19:15:00'),(17,2,'MA','H2 Mathematics Paper 1','2014-09-15 16:15:00','2014-09-15 19:15:00'),(18,1,'HI','H1 History','2014-09-15 21:30:00','2014-09-16 00:30:00'),(19,2,'HI','H2 History Paper 1','2014-09-15 21:30:00','2014-09-16 00:30:00'),(20,2,'GE','H2 Geography Paper 1','2014-09-15 21:30:00','2014-09-16 00:30:00'),(21,2,'CL','H2 CLL Paper 1','2014-09-16 16:15:00','2014-09-16 19:30:00'),(22,2,'ML','H2 MLL Paper 1','2014-09-16 16:15:00','2014-09-16 19:30:00'),(23,2,'TL','H2 TLL Paper 1','2014-09-16 16:15:00','2014-09-16 19:30:00'),(24,2,'EL','H2 ELL Paper 1','2014-09-16 16:15:00','2014-09-16 19:30:00'),(25,2,'MU','H2 Music Paper 1','2014-09-16 16:15:00','2014-09-16 18:45:00'),(26,1,'CH','H1 Chemistry Paper 2','2014-09-16 21:30:00','2014-09-16 23:30:00'),(27,2,'CH','H2 Chemistry Paper 2','2014-09-16 21:30:00','2014-09-16 23:30:00'),(28,2,'EC','H2 Economics Paper 2','2014-09-17 16:15:00','2014-09-17 18:30:00'),(29,2,'LI','H2 Literature in English Paper 2','2014-09-17 21:30:00','2014-09-18 00:30:00'),(30,2,'HI','H2 History Paper 2','2014-09-18 16:15:00','2014-09-18 19:15:00'),(31,1,'GE','H1 Geography','2014-09-21 16:15:00','2014-09-21 19:15:00'),(32,2,'GE','H2 Geography Paper 2','2014-09-21 16:15:00','2014-09-21 19:15:00'),(33,2,'BI','H2 Biology Paper 3','2014-09-21 21:30:00','2014-09-21 23:30:00'),(34,2,'PH','H2 Physics Paper 3','2014-09-21 21:30:00','2014-09-21 23:30:00'),(35,2,'CH','H2 Chemistry Paper 3','2014-09-22 16:15:00','2014-09-22 18:15:00'),(36,2,'MA','H2 Mathematics Paper 2','2014-09-22 21:30:00','2014-09-23 00:30:00'),(37,3,'EC','H3 Economics','2014-09-23 16:15:00','2014-09-23 19:15:00'),(38,3,'BI','H3 Biology','2014-09-23 16:15:00','2014-09-23 18:45:00'),(39,3,'AR','H3 Art','2014-09-23 16:15:00','2014-09-23 18:15:00'),(40,2,'KI','H2 KI Paper 1','2014-09-23 21:30:00','2014-09-24 00:30:00'),(41,2,'EL','H2 ELL Paper 2','2014-09-24 16:15:00','2014-09-24 19:15:00'),(42,3,'MA','H3 Mathematics','2014-09-24 16:15:00','2014-09-24 19:15:00'),(43,3,'TL','H3 TLL','2014-09-24 16:15:00','2014-09-24 19:30:00'),(44,3,'CH','H3 Chemistry','2014-09-24 21:30:00','2014-09-25 00:00:00'),(45,1,'CH','H1 Chemistry Paper 1','2014-09-25 16:15:00','2014-09-25 17:05:00'),(46,2,'CH','H2 Chemistry Paper 1','2014-09-25 16:15:00','2014-09-25 17:15:00'),(47,2,'CL','H2 CLL Paper 2','2014-09-28 16:15:00','2014-09-28 19:15:00'),(48,2,'ML','H2 MLL Paper 2','2014-09-28 16:15:00','2014-09-28 19:15:00'),(49,2,'TL','H2 TLL Paper 2','2014-09-28 16:15:00','2014-09-28 19:15:00'),(50,1,'PH','H1 Physics Paper 1','2014-09-28 21:30:00','2014-09-28 22:30:00'),(51,2,'PH','H2 Physics Paper 1','2014-09-28 21:30:00','2014-09-28 22:45:00'),(52,1,'BI','H1 Biology Paper 1','2014-09-28 21:30:00','2014-09-28 22:30:00'),(53,2,'BI','H2 Biology Paper 1','2014-09-28 21:30:00','2014-09-28 22:45:00');
+/*!40000 ALTER TABLE `exams` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2015-11-04 21:51:58
